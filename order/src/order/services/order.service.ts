@@ -22,7 +22,9 @@ export class OrderService {
 
   async create(createOrderDto: CreateOrderDto) {
     try {
-      await axios.get(`http://localhost:3000/user/${createOrderDto.user_uuid}`);
+      await axios.get(
+        `http://${process.env.AUTH_API_URL}/user/${createOrderDto.user_uuid}`,
+      );
     } catch (error) {
       if (error.response && error.response.status === 404) {
         throw new BadRequestException('Usuário com este id não foi encontrado');
@@ -78,7 +80,9 @@ export class OrderService {
     }
 
     try {
-      await axios.get(`http://localhost:3001/product/${addDTO.product_uuid}`);
+      await axios.get(
+        `http://${process.env.PRODUCT_API_URL}/product/${addDTO.product_uuid}`,
+      );
     } catch (error) {
       if (error.response && error.response.status === 404) {
         throw new BadRequestException('Produto com este id não foi encontrado');
@@ -110,7 +114,9 @@ export class OrderService {
     }
 
     try {
-      await axios.get(`http://localhost:3001/product/${product_uuid}`);
+      await axios.get(
+        `http://${process.env.PRODUCT_API_URL}/product/${product_uuid}`,
+      );
     } catch (error) {
       if (error.response && error.response.status === 404) {
         throw new BadRequestException('Produto com este id não foi encontrado');

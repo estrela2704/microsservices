@@ -4,7 +4,7 @@ import { NotificationService } from './notification.service';
 
 @Injectable()
 export class RabbitMQConsumerService {
-  private readonly rabbitMQUrl: string = 'amqp://guest:guest@localhost';
+  private readonly rabbitMQUrl: string = 'amqp://guest:guest@rabbitmq';
   private readonly queueName: string = 'notification_queue';
 
   constructor(private readonly notificationService: NotificationService) {}

@@ -11,7 +11,9 @@ export class NotificationService {
     uuid: string,
   ): Promise<{ userName: string; userEmail: string }> {
     try {
-      const response = await axios.get(`http://localhost:3000/user/${uuid}`);
+      const response = await axios.get(
+        `http://${process.env.AUTH_API_URL}/user/${uuid}`,
+      );
       const user = response.data.user;
       const data = {
         userName: `${user.firstName} ${user.lastName}`,
@@ -28,7 +30,10 @@ export class NotificationService {
 
   async getProduct(uuid: string) {
     try {
-      const product = await axios.get(`http://localhost:3001/product/${uuid}`);
+      console.log(`http://${process.env.PRODUCT_API_URL}/product/${uuid}`);
+      const product = await axios.get(
+        `http://${process.env.PRODUCT_API_URL}/product/${uuid}`,
+      );
 
       return product;
     } catch (error) {

@@ -18,7 +18,7 @@ export class PaymentService {
   private async getOrder(orderUuid: string) {
     try {
       const response = await axios.get(
-        `http://localhost:3002/order/${orderUuid}`,
+        `http://${process.env.ORDER_API_URL}/order/${orderUuid}`,
       );
       return response.data;
     } catch (error) {
@@ -34,7 +34,7 @@ export class PaymentService {
 
   private async concludeOrder(orderUuid: string) {
     try {
-      await axios.post(`http://localhost:3002/order/conclude`, {
+      await axios.post(`http://${process.env.ORDER_API_URL}/order/conclude`, {
         order_uuid: orderUuid,
       });
     } catch (error) {
@@ -51,7 +51,7 @@ export class PaymentService {
   private async getProduct(productUuid: string) {
     try {
       const product = await axios.get(
-        `http://localhost:3001/product/${productUuid}`,
+        `http://${process.env.PRODUCT_API_URL}/product/${productUuid}`,
       );
 
       return product;

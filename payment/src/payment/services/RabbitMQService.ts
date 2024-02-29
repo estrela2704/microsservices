@@ -3,7 +3,7 @@ import * as amqp from 'amqplib';
 
 @Injectable()
 export class RabbitMQService {
-  private readonly rabbitMQUrl: string = 'amqp://guest:guest@localhost';
+  private readonly rabbitMQUrl: string = 'amqp://guest:guest@rabbitmq';
   private readonly queueName: string = 'notification_queue';
 
   async sendMessage(message: any): Promise<void> {
