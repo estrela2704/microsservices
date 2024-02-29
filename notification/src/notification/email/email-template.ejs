@@ -1,0 +1,10 @@
+<h1>Olá <%= userName %>,</h1>
+<p>Obrigado por fazer o seu pedido! Aqui estão os detalhes do seu pedido:</p>
+
+<ul>
+  <% products.forEach(product => { %>
+    <li><%= product.name %> - <%= product.price %></li>
+  <% }); %>
+</ul>
+
+<p>Total do pedido: R$<%= totalPrice %></p>
