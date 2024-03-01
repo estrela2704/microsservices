@@ -1,7 +1,7 @@
 FROM node:latest
 
 # Instala o netcat
-RUN apt-get update && apt-get install -y netcat-openbsd
+RUN apt-get update && apt-get install -y netcat-openbsd && apt-get install -y dos2unix
 
 WORKDIR /app
 
@@ -15,6 +15,8 @@ COPY start.sh /start.sh
 
 RUN chmod +x /start.sh
 
+RUN dos2unix /start.sh
+
 EXPOSE 3004
 
-CMD ["/start.sh"]
+CMD ["sh", "/start.sh"]
