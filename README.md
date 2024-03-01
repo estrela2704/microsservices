@@ -12,11 +12,11 @@ Para executar este conjunto de microserviços, você precisa ter o Docker instal
    
 ## Acesso
 Após a inicialização, os microserviços estarão disponíveis nas seguintes portas:
-- Microserviço de Autenticação: localhost:3000
-- Microserviço de Produtos: localhost:3001
-- Microserviço de Pedidos: localhost:3002
-- Microserviço de Pagamentos: localhost:3003
-- Microserviço de Notificações: localhost:3004
+- Microsserviço de Autenticação: localhost:3000
+- Microsserviço de Produtos: localhost:3001
+- Microsserviço de Pedidos: localhost:3002
+- Microsserviço de Pagamentos: localhost:3003
+- Microsserviço de Notificações: localhost:3004
 
 ## Modo de uso
  1. Registre um usuário com a API de autenticação.
