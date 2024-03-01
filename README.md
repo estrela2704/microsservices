@@ -8,7 +8,7 @@ Para executar este conjunto de microserviços, você precisa ter o Docker instal
 3. Navegue até o diretório onde o repositório foi clonado:
    cd microsservices
 4. No terminal, execute o comando Docker Compose para iniciar os microserviços:
-   docker-compose up
+   docker-compose up -d
 
 Após a inicialização, os microserviços estarão disponíveis nas seguintes portas:
 - Microserviço de Autenticação: localhost:3000
