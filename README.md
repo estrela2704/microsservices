@@ -9,7 +9,8 @@ Para executar este conjunto de microserviços, você precisa ter o Docker instal
    cd microsservices
 4. No terminal, execute o comando Docker Compose para iniciar os microserviços:
    docker-compose up -d
-
+   
+## Acesso
 Após a inicialização, os microserviços estarão disponíveis nas seguintes portas:
 - Microserviço de Autenticação: localhost:3000
 - Microserviço de Produtos: localhost:3001
