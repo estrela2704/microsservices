@@ -17,6 +17,14 @@ Após a inicialização, os microserviços estarão disponíveis nas seguintes p
 - Microserviço de Pedidos: localhost:3002
 - Microserviço de Pagamentos: localhost:3003
 - Microserviço de Notificações: localhost:3004
+
+## Modo de uso
+ 1. Registre um usuário com a API de autenticação.
+ 2. Crie uma ordem de compra com a API de pedidos.
+ 3. Liste os produtos disponíveis ou cadatre-os na API de Produtos.
+ 4. Adicione um produto ao seu pedido na API pedidos, também é possivel remover produtos do pedido.
+ 5. Faça o pagamento da ordem de compra na API de pagamentos.
+ 6. Verifique seu e-mail.
   
 Para acessar a documentação Swagger de qualquer microserviço, basta abrir um navegador da web e navegar para localhost:PORTA/api, onde PORTA é a porta correspondente ao microserviço que você deseja acessar.
-
+Obs: lembre-se de registrar um usuário com um e-mail real, para que possa receber a notificação .
