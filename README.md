@@ -28,4 +28,7 @@ Após a inicialização, os microserviços estarão disponíveis nas seguintes p
   
 Para acessar a documentação Swagger de qualquer microserviço, basta abrir um navegador da web e navegar para localhost:PORTA/api, onde PORTA é a porta correspondente ao microserviço que você deseja acessar.
 
-Obs: lembre-se de registrar um usuário com um e-mail real, para que possa receber a notificação .
+Obs: lembre-se de registrar um usuário com um e-mail real, para que possa receber a notificação.
+
+## Autor
+- Felipe Estrela de Albuquerque
